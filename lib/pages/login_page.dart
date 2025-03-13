@@ -29,14 +29,36 @@ class LoginPage extends StatelessWidget {
                 labelText: "Password",
               ),
             ),
-            ElevatedButton(
-              child: Text("Login"),
-              style: TextButton.styleFrom(minimumSize: Size(150, 50)),
-              
-              onPressed: () {
-                Navigator.pushNamed(context,MyRoutes.homeRoutes);
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.homeRoutes);
               },
+              child: Container(
+                width: 150,
+                height: 50,
+                alignment: Alignment.center,
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
             ),
+            // ElevatedButton(
+            // child: Text("Login"),
+            // style: TextButton.styleFrom(minimumSize: Size(150, 50)),
+
+            // onPressed: () {
+            // Navigator.pushNamed(context, MyRoutes.homeRoutes);
+            // },
+            // ),
           ],
         ),
       ),
